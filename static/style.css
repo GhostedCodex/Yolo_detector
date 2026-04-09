@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    background: transparent;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.15s;
+}
+
+.tab.active {
+    background: #1e40af;
+    border-color: #1e40af;
+    color: #fff;
+}
+
+.tab-content {
+    display: block;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+.drop-zone {
+    border: 2px dashed #334155;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.drop-zone:hover,
+.drop-zone.over {
+    border-color: #3b82f6;
+}
+
+.drop-zone p {
+    color: #94a3b8;
+}
+
+.link {
+    color: #3b82f6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hint {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    background: #1e40af;
+    color: #fff;
+    border: none;
+    padding: 0.65rem 1.75rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-top: 0.5rem;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn:disabled {
+    background: #334155;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+#progress {
+    color: #f59e0b;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.results-box {
+    margin-top: 1rem;
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.results-box a {
+    color: #3b82f6;
+}
+
+.hidden {
+    display: none;
+}

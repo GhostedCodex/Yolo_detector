@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Object Detection</h1>
+        <p class="subtitle">Upload a video or use live webcam stream</p>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('upload')">Upload Video</button>
+            <button class="tab" onclick="showTab('live')">Live Stream</button>
+        </div>
+
+        <!-- Upload tab -->
+        <div id="upload-tab" class="tab-content">
+            <div class="drop-zone" id="drop-zone">
+                <p>Drop a video here or <label for="file-input" class="link">browse</label></p>
+                <input type="file" id="file-input" accept="video/*" style="display:none">
+                <p class="hint" id="file-name">No file selected</p>
+            </div>
+            <button class="btn" id="detect-btn" onclick="runDetection()" disabled>Run Detection</button>
+            <div id="progress" class="hidden">Processing... this may take a minute on CPU.</div>
+            <div id="results" class="hidden results-box"></div>
+        </div>
+
+        <!-- Live tab -->
+        <div id="live-tab" class="tab-content hidden">
+            <img id="stream-img" src="" alt="Live stream" style="width:100%;border-radius:8px">
+            <button class="btn" onclick="toggleStream()">Start Stream</button>
+        </div>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+
+</html>
